@@ -1,0 +1,701 @@
+body{
+    margin: 0px;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header .container ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+header .container ul li{
+    margin-left: 60px;
+}
+
+header .container ul li a{
+    color:#b0b2c3;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    transition:.25s;
+}
+
+header .container ul li a:after{
+    content:'';
+    display: block;
+    height: 4px;
+    width: 0%;
+    background-color: #f06248;
+    transition: .25s;
+}
+
+header .container ul li:hover a:after{
+    width: 100%;
+}
+
+header img{
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero{
+    padding-top: 104px;
+    height: 94vh;
+    background:url('images/hero-background.jpeg');
+    background-size: 95%;
+    color: white;
+    position: relative;
+    background-position: center 5%;
+    transition: background-position 0.05s ease; /* Faster update */
+}
+
+.hero .container{
+    display: flex;
+    max-width: 1200px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    transition: .5s;
+    opacity: 1;
+}
+
+.hero .hero-name{
+    padding-bottom: 150px;
+    z-index: 8;
+    position: relative;
+    transition: .5s;
+}
+
+
+
+.hero .container h1{
+    font-size: 115px;
+    margin-bottom: 0px;
+    font-family: 'League Spartan' ,Helvetica,Arial,sans-serif;
+}
+
+.hero .container p{
+    font-style: italic;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.hero .socials{
+    position:absolute;
+    right: 3%;
+    bottom: 50%;
+    height: 100px;
+    width:50px;
+}
+
+
+.arrow-button{
+    position: relative;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    padding: 20px 30px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+    ;
+}
+
+.arrow-button:after{
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: block;
+    height: 35px;
+    width: 75px;
+    object-fit: contain;
+    background: url(images/right-arrow.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .5s;
+}
+
+.arrow-button:hover::after{
+    left: 113%;
+}
+
+.hero .socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero .socials ul{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+}
+
+.hero .socials ul li {
+    margin-bottom: 40px;
+}
+
+.hero .socials ul li i{
+    color: #b0b2c3;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.hero .socials ul li i:hover{
+    color: white;
+}
+
+.projects-line{
+    position: absolute;
+    font-size: 25px;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    text-align: center;
+    color: #b0b2c3;
+}
+
+.projects-line:after{
+    position: absolute;
+    top: 158%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    width: 2px;
+    height: 115px;
+    background-color: rgb(176, 178, 195);
+}
+
+.hero-letter{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.hero-letter img{
+    height: 850px;
+    width: auto;
+    opacity: .45;
+    object-fit: contain;
+}
+
+.project-section{
+    background-color: #f3f3f3;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position:relative
+}
+
+.project-section .projects-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.project-section .projects-header p{
+    text-align: center;
+    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #b19386;
+    font-weight: bold;
+}
+
+.project-section .projects-header h2{
+    font-family: League Spartan, Helvetica, Arial, sans-serif;
+    margin-top:0px;
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 60px;
+    color: #4a4a4a;
+}
+
+.project{
+    position: relative;
+    height: 480px;
+    width: 936px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .25s;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    background:url('images/placeholder.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom:150px;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, .45);
+}
+
+.project-right{
+    left: 50px;
+}
+
+.project-left{
+    right: 50px;
+}
+
+.project h1{
+    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.project p{
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.project-name{
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    color: white;
+    transition: .5s;
+    width: 100%;
+}
+
+.project-left .project-name {
+    text-align: right;
+}
+
+.project .container{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+}
+.project:hover .project-name{
+    transform: scale(1.05);
+}
+
+.project:hover{
+    box-shadow: 0 20px 100px 0 rgba(0, 0, 0, .45);
+}
+
+.project-count{
+    pointer-events: none;
+}
+
+.project-right:hover .project-count h1{
+    top: 50%;
+    opacity: 1;
+    color: white;
+}
+
+.project-left:hover .project-count h1{
+    top: 50%;
+    opacity: 1;
+    color: white;
+}
+
+.project:hover .blue-overlay{
+    left: 50%;
+}
+
+.project .blue-overlay{
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(270deg, #235aa6, #101b3b81);
+    z-index: 4;
+    transition: .65s;
+}
+.project-right .project-count{
+    position: absolute;
+    z-index: 11;;
+    top: -3%;
+    right: -14%;
+    overflow-y: hidden;
+    width: inherit;
+    height: 185px;
+}
+
+.project-right .project-count h1{
+    position: absolute;
+    color: #afb1c2;
+    top: 200%;
+    left: 73%;
+    transform: translate(-50%,-50%);
+    font-size: 200px;
+    margin:0px;
+    opacity: 0;
+    transition:.75s;
+}
+
+.project-left .project-count{
+    position: absolute;
+    z-index: 11;
+    top: -3%;
+    overflow-y: hidden;
+    width: 250px;
+    height: 185px;
+    left: -71px;
+}
+
+.project-left .project-count h1{
+    position: absolute;
+    color: #afb1c2;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 200px;
+    margin:0px;
+    opacity: 0;
+    transition:.75s;
+}
+
+.project-scroll-overlay{
+    position: absolute;
+    top:50%;
+    left: 200%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(270deg, #235aa6, #101b3b);
+}
+
+.hero-contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 700px;
+    z-index: 10;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, .55);
+    transition: .25s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.hero-contact-wrapper{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow-y:hidden;
+    position: relative;
+}
+
+.hero-contact-about{
+    width: 575px;
+    height: 100%;
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    transition: .5s;
+    top: -100%;
+}
+
+.hero-contact-about .about-text{
+    z-index: 10;
+}
+
+.hero-contact-about h3{
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 410px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.hero-contact-about p{
+    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 410px;
+    color: black;
+    line-height: 24px;
+}
+
+.hero-contact-about .floating-about{
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    right: -17%;
+}
+
+.floating-about h1{
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+    margin-top: 15px;
+    font-size: 190px;
+    color: rgb(224, 224, 226);
+}
+
+.form-top{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-top h3{
+    font-family: League Spartan, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+
+.form-top p{
+    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+}
+
+.hero-contact-about strong{
+    color:#ef7d66;
+}
+
+.hero-contact-form{
+    background-color: #1c1d25;
+    width: 575px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+    top: 100%;
+}
+
+.hero-contact-form form{
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 4;
+}
+.hero-contact-form form p{
+    margin-top: 0px;
+}
+
+.hero-contact-form div{
+    width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hero-contact-form button{
+    margin-left: auto;
+    display: block;
+    background: none;
+    border: none;
+    color: #d8ceca;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.floating-contact{
+    position: absolute;
+    bottom: -22%;
+    left: 21%;
+    z-index: 1;
+}
+
+.floating-contact h1{
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+    margin-top: 15px;
+    font-size: 190px;
+    color: #23242c;
+
+}
+
+.hero-contact-form form p{
+    font-weight: bold;
+    font-family: League Spartan, Helvetica, Arial, sans-serif;
+}
+
+.hero-contact-form form input{
+    margin-bottom: 15px;
+    background: none;
+    border-top:0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+.hero-contact-form form textarea{
+    margin-bottom: 15px;
+    height: 100px;
+    border-top:0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: solid 1px white;
+    background: none;
+}
+
+.hero-contact-tech{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 410px;
+}
+
+.hero-contact-tech div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75px;
+    margin: 5px;
+}
+
+.hero-contact-tech div p{
+    font-family: League Spartan, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    opacity: 0;
+    padding-top: 5px;
+    transition: .5s;
+    margin: 0px auto;
+}
+
+#form-button{
+    margin-top: 20px;
+    width: 180px;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    font-family: League Spartan, Helvetica, Arial, sans-serif;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.hero-contact-tech div:hover p{
+    opacity: 1;
+}
+
+.hero-contact-tech img{
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: .5s;
+}
+.hero-contact-tech img:hover{
+    filter: grayscale(0%);
+}
+
+.tech-section{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.tech small{
+    font-weight: bold;
+}
+
+.tech{
+    padding: 20px;
+    box-shadow:0 20px 60px 0 rgba(0,0,0,.15);
+    overflow: hidden;
+    border-left: solid .25px rgba(223, 222, 222, 0.315);
+    border-right: solid .25px rgba(223, 222, 222, 0.315);
+    background-color: #fff;
+}
+
+.tech img{
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background: #1c1d25;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+footer img{
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin: 20px;
+}
+
+footer div{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-nav a{
+    margin: 5px 15px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "League Spartan", Helvetica, Arial, sans-serif;
+}
+
+.footer-copyright{
+    margin-top: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+/* .hero .socials ul li i{
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+} */
