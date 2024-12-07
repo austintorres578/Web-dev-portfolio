@@ -1,12 +1,31 @@
+@font-face {
+    font-family: 'arista-pro-light';
+    src: url('/fonts/Arista-pro/Arista-Pro-Alternate-Light-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'zrnic';
+    src: url('/fonts/zrnic/zrnic rg.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'clarendon';
+    src: url('/fonts/clarendon/Clarendon Regular') format('opentype');
+}
+
+
 body{
     margin: 0px;
+    cursor: url('/cursor/purple-cursor.png'),auto;
 }
 
 header{
     position: fixed;
     width: 100%;
     z-index: 20;
-    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+    font-family: 'arista-pro-light';
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 header .container{
@@ -56,12 +75,13 @@ header img{
 .hero{
     padding-top: 104px;
     height: 94vh;
-    background:url('images/hero-background.jpeg');
     background-size: 95%;
     color: white;
     position: relative;
     background-position: center 5%;
-    transition: background-position 0.05s ease; /* Faster update */
+    background:url('images/hero-background.jpeg');
+    background-size: 95%;
+    overflow: hidden;
 }
 
 .hero .container{
@@ -83,24 +103,61 @@ header img{
     transition: .5s;
 }
 
+.hero-stripes{
+    position: absolute;
+    width: 158%;
+    transform: rotate(-29deg);
+    bottom: 4%;
+    right: -60%;
+    z-index: 1;
+}
+
+.red{
+    height: 30px;
+    width: 100%;
+    background-color: #cc2b33;
+}
+
+.yellow{
+    height: 30px;
+    width: 100%;
+    background-color: #ebc342;
+}
+
+.cyan{
+    height: 30px;
+    width: 100%;
+    background-color: #4ca89e;
+}
+
+.blue{
+    height: 30px;
+    width: 100%;
+    background-color: #416bad;
+}
 
 
 .hero .container h1{
     font-size: 115px;
     margin-bottom: 0px;
-    font-family: 'League Spartan' ,Helvetica,Arial,sans-serif;
+    letter-spacing: -3px;
+    font-family: 'arista-pro-light';
+    font-weight: 400;
 }
 
 .hero .container p{
-    font-style: italic;
-    margin-bottom: 50px;
+    font-family: 'zrnic';
+    letter-spacing: 3px;
+    /* font-style: italic; */
+    margin-bottom: 35px;
+    margin-top: 0px;
     font-size: 32px;
 }
 
 .hero .socials{
     position:absolute;
     right: 3%;
-    bottom: 50%;
+    bottom: 42%;
     height: 100px;
     width:50px;
 }
@@ -108,16 +165,16 @@ header img{
 
 .arrow-button{
     position: relative;
-    background: linear-gradient(270deg, #f06449, #ef3636);
+    background: linear-gradient(270deg, #feb414, #f15c21);
     padding: 20px 30px;
     color: white;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 25px;
     border: none;
-    cursor: pointer;
+    /* cursor: pointer; */
     font-family: 'League Spartan', Helvetica, Arial, sans-serif;
-    ;
+    
 }
 
 .arrow-button:after{
@@ -157,9 +214,11 @@ header img{
     margin-bottom: 40px;
 }
 
-.hero .socials ul li i{
-    color: #b0b2c3;
-    cursor: pointer;
+.hero .socials ul li img{
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    /* cursor: pointer; */
     transition: .25s;
 }
 
@@ -172,21 +231,31 @@ header img{
     font-size: 25px;
     top: 87%;
     left: 50%;
-    transform: translate(-50%,50%);
     text-align: center;
     color: #b0b2c3;
+    height: 185px;
+}
+
+.ps-side{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 15;
+}
+.ps-side img{
+    height: 480px;
+    width: 100%;
 }
 
 .projects-line:after{
     position: absolute;
-    top: 158%;
     left: 50%;
-    transform: translate(-50%, -50%);
     content: "";
     display: block;
     width: 2px;
     height: 115px;
     background-color: rgb(176, 178, 195);
+    bottom: 0%;
 }
 
 .hero-letter{
@@ -218,17 +287,18 @@ header img{
 
 .project-section .projects-header p{
     text-align: center;
-    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+    font-family: 'zrnic';
+    letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    color: #b19386;
+    color: #fd982b;
     font-weight: bold;
 }
 
 .project-section .projects-header h2{
-    font-family: League Spartan, Helvetica, Arial, sans-serif;
+    font-family: 'arista-pro-light';
     margin-top:0px;
     text-align: center;
     margin-bottom: 70px;
@@ -239,7 +309,7 @@ header img{
 .project{
     position: relative;
     height: 480px;
-    width: 936px;
+    width: 720px;
     margin-left: auto;
     margin-right: auto;
     transition: .25s;
@@ -249,23 +319,26 @@ header img{
     background:url('images/placeholder.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-bottom:150px;
     box-shadow: 0 20px 80px 0 rgba(0, 0, 0, .45);
+    border: solid 5px gray;
 }
 
 .project-right{
-    left: 50px;
+    left: 30px;
 }
 
 .project-left{
-    right: 50px;
+    right: 30px;
 }
 
 .project h1{
-    font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+    font-family: 'zrnic';
+    letter-spacing: 3px;
     font-size: 60px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .project p{
@@ -279,15 +352,24 @@ header img{
     z-index: 10;
     height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     flex-direction: column;
+    padding: 0px 25px;
     color: white;
     transition: .5s;
     width: 100%;
 }
 
+.project-name a{
+    width: fit-content;
+}
+
 .project-left .project-name {
     text-align: right;
+}
+
+.project-left a{
+    margin-left: auto;
 }
 
 .project .container{
@@ -313,7 +395,7 @@ header img{
 .project-right:hover .project-count h1{
     top: 50%;
     opacity: 1;
-    color: white;
+    color: white;;
 }
 
 .project-left:hover .project-count h1{
@@ -366,7 +448,7 @@ header img{
     overflow-y: hidden;
     width: 250px;
     height: 185px;
-    left: -71px;
+    left: 55px;
 }
 
 .project-left .project-count h1{
@@ -527,7 +609,7 @@ header img{
     border: none;
     color: #d8ceca;
     font-size: 30px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .floating-contact{
@@ -610,7 +692,7 @@ header img{
     font-weight: bold;
     letter-spacing: 1px;
     padding: 15px 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .hero-contact-tech div:hover p{
@@ -639,7 +721,7 @@ header img{
 
 .tech{
     padding: 20px;
-    box-shadow:0 20px 60px 0 rgba(0,0,0,.15);
+    box-shadow:inset 4px 4px 60px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     border-left: solid .25px rgba(223, 222, 222, 0.315);
     border-right: solid .25px rgba(223, 222, 222, 0.315);
