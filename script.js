@@ -7,6 +7,21 @@ const heroContactForm = document.querySelector('.hero-contact-form');
 const heroContactAbout = document.querySelector('.hero-contact-about');
 const heroName = document.querySelector('.hero-name');
 
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const rows = document.querySelectorAll('.a-letter-con > div'); // Select all rows
+
+    rows.forEach((row, index) => {
+      // Apply the animation with a delay based on the row index
+      setTimeout(() => {
+        row.style.opacity = "1"; // Make row visible
+        row.style.transform = "translateY(0)"; // Remove translate effect
+      }, index * 250); // Stagger by 500ms for each row
+    });
+  }, 500); // Start after 5 seconds
+});
+
+
 let initialized = false; // Flag to check if the initial position has been set
 
 // Function to handle hero background movement

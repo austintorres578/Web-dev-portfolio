@@ -241,10 +241,102 @@ header img{
     left: 0%;
     top: 0%;
     z-index: 15;
+    height: 460px;
+    width: 70px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px;
 }
-.ps-side img{
-    height: 480px;
-    width: 100%;
+
+.ps-side-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 10px;
+    border: solid 1px white;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.ps-side-logo p{
+    font-family: 'zrnic';
+    letter-spacing: 1px;
+    margin: 0px;
+    font-size: 9px !important;
+    text-align: center;
+}
+
+.ps-side-logo img{
+    /* height: 480px;
+    width: 100%; */
+    width:35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ps-side-text{
+    display: flex;
+    justify-content: center;
+}
+
+.ps-side-text h3{
+    font-family: 'zrnic';
+    letter-spacing: 1px;
+    font-size: 56px;
+    color: white !important;
+    writing-mode: vertical-rl;
+    text-orientation: inherit;
+    width: max-content !important;
+    margin: 0px;
+    transform: rotate(180deg);
+    text-align: center;
+    margin: 0px !important;
+    font-weight: 400;
+}
+
+.ps-side-sub{
+    background: white;
+    font-size: 8px !important;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase
+}
+
+.ps-rating{
+    background-color: white;
+    padding: 3px;
+}
+
+.ps-rating div{
+    border: solid 2px black;
+    padding: 3px;
+}
+
+.ps-rating h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    transform: rotate(-23deg);
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.ps-rating p{
+    margin-top: 0px !important;
+    color: black;
 }
 
 .projects-line:after{
@@ -260,7 +352,7 @@ header img{
 
 .hero-letter{
     position: absolute;
-    top:45%;
+    top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     z-index: 1;
@@ -781,3 +873,133 @@ footer div{
     width: auto;
     object-fit: contain;
 } */
+
+body {
+    margin: 0; /* Remove default body margin */
+    overflow-x: hidden; /* Prevent x-axis overflow */
+  }
+  
+  .a-letter-con {
+    height: 700px;
+    width: 600px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    opacity: .25;
+  }
+  
+  .a-three-row {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr; /* Use fractional units for better responsiveness */
+    column-gap: 20px; /* Space between columns */
+    height: 14.285%; /* Maintain height ratio */
+    margin-top: 20px;
+    max-width: 100%; /* Ensure the grid doesn't exceed its container */
+  }
+  
+  .a-three-row div {
+    border-radius: 50px;
+    width: 100%; /* Make divs responsive to grid cell size */
+    height: 100%; /* Ensure they fill their row height */
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  .a-three-row div:before{
+    content: "";
+    position: absolute;
+    height: 96%;
+    width: 100%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border-radius: 60px;
+    transform: translate(-50%, -50%);
+    box-shadow: 7px 0px 1px 0px rgb(255, 0, 0);
+}
+
+.a-three-row div:after{
+    content: "";
+    position: absolute;
+    height: 96%;
+    width: 100%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border-radius: 60px;
+    transform: translate(-50%, -50%);
+    box-shadow: -7px 0px 1px 0px rgb(255, 0, 0);
+}
+
+.add-shadow:after{
+    content: "";
+    position: absolute;
+    height: 96%;
+    width: 100%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border-radius: 60px;
+    transform: translate(-50%, -50%);
+    box-shadow: -7px 0px 1px 0px rgb(255, 0, 0);
+}
+
+.add-shadow:before{
+    content: "";
+    position: absolute;
+    height: 96%;
+    width: 100%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border-radius: 60px;
+    transform: translate(-50%, -50%);
+    box-shadow: 7px 0px 1px 0px rgb(255, 0, 0);
+}
+
+#remove-shadow:after{
+    box-shadow: none !important;
+}
+
+#remove-shadow:before{
+    box-shadow: none !important;
+}
+
+  .one-long {
+    display: grid;
+    grid-template-columns: 0.25fr 2.5fr 0.25fr; /* Use fractional units for better responsiveness */
+    column-gap: 20px; /* Space between columns */
+    height: 14.285%; /* Maintain height ratio */
+    margin-top: 20px;
+    max-width: 100%; /* Ensure the grid doesn't exceed its container */
+  }
+  
+  .one-long div {
+    border-radius: 50px;
+    width: 100%; /* Make divs responsive to grid cell size */
+    height: 100%; /* Ensure they fill their row height */
+  }
+
+  .a-one-row{
+    display: grid;
+    grid-template-columns: 100%; /* Use fractional units for better responsiveness */
+    column-gap: 20px; /* Space between columns */
+    height: 14.285%; /* Maintain height ratio */
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .a-one-row div{
+    border-radius: 50px;
+
+  }
+  
+  .a-letter-con > div {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and slide in */
+  }
+  
