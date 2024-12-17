@@ -183,7 +183,7 @@
 
 body{
     margin: 0px;
-    cursor: url('/cursor/purple-cursor.png'),auto;
+    cursor: url('cursor/purple-cursor.png'),auto;
     scroll-behavior: smooth;
 }
 
