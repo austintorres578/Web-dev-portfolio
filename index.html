@@ -8,6 +8,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/nav-logo.png">
     <title>Austin Torres | Front-End Developer</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "DehX4m7-kJlcGoLNK",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -17,9 +40,10 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Tech</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="desk-about"><a href="#" onclick="revealHeroContact()">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tech">Tech</a></li>
+                    <li class="desk-contact"><a href="#" onclick="revealHeroContact()">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -34,12 +58,9 @@
         </div>
         <div class="socials">
             <ul>
-                <li><a href="#"><img src="images/socials/slightly_more_pixelated_linkedin_logo.png"></a></li>
-                <li><a href="#"><img src="images/socials/less_pixelated_github_logo_v2.png"></a></li>
+                <li><a href="https://www.linkedin.com/in/austin-torres-55696420a"><img src="images/socials/slightly_more_pixelated_linkedin_logo.png"></a></li>
+                <li><a href="https://github.com/austintorres578/"><img src="images/socials/less_pixelated_github_logo_v2.png"></a></li>
             </ul>
-        </div>
-        <div class="projects-line">
-            <p>Projects</p>
         </div>
         <div class="hero-letter">
             <div class="a-letter-con">
@@ -171,7 +192,7 @@
                             <button>X</button>
                         </div>
                     </div>
-                    <form>
+                    <form id="contact-form">
                         <p>Name *</p>
                         <input type="text"></input>
                         <p>Email *</p>
@@ -189,38 +210,134 @@
 
     </section>
 
-    <section class="project-section">
+    <section class="mobile-about">
+        <div class="mobile-about-me">
+            <h3>About Me.</h3>
+            <p>Front-End Developer</p>
+            <p>Lorem ipsum dolor sit, <strong>amet consectetur adipisicing elit.</strong> Quam praesentium quos iste eos quo beatae aut molestiae, eveniet dolores commodi facilis hic consequatur, dolorum nesciunt nemo repudiandae optio ea perferendis.</p>
+        </div>
+        <div class="floating-about">
+            <h1>About</h1>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-section">
+
+        <div class="tech-container keys">
+            <div class="key-con" style="background-color: #df0024;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/html_pixelated.webp">
+                    </div>
+                </div> 
+                <p>HTML5</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #f3c300;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/css_pixelated.webp">
+                    </div>
+                </div> 
+                <p>CSS3</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #00ac9f;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/javascript_pixelated.webp">
+                    </div>
+                </div> 
+                <p>JAVASCRIPT</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #2e6db4;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/react_less_pixelated.webp">
+                    </div>
+                </div> 
+                <p>REACT</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #2e6db4;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/wordpress_pixelated.webp">
+                    </div>
+                </div> 
+                <p>WORDPRESS</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #00ac9f;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/figma_more_pixelated.webp">
+                    </div>
+                </div> 
+                <p>FIGMA</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #f3c300;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/sass_pixelated.webp">
+                    </div>
+                </div> 
+                <p>SASS</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #df0024;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/bootstrap_pixelated.webp">
+                    </div>
+                </div> 
+                <p>BOOTSTRAP</p>  
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="project-section" id="projects">
         <div class="projects-header">
-            <p>Case Studies</p>
+            <p>My Projects</p>
             <h2>Latest Works</h2>
         </div>
 
-        <img style="position: absolute;left:5%;top: 15%;" src="images/shapes/blue-square.jpeg">
-        <img style="position: absolute;right:0%;top: 30%;" src="images/shapes/blue-square.jpeg">
+        <img class="floating-shape" style="position: absolute;left:5%;top: 15%;" src="images/shapes/blue-square.jpeg">
+        <img class="floating-shape" style="position: absolute;right:0%;top: 30%;" src="images/shapes/blue-square.jpeg">
 
-        <img style="position: absolute;left:0%;bottom: 25%;" src="images/shapes/blue-x.jpeg">
+        <img class="floating-shape" style="position: absolute;left:0%;bottom: 25%;" src="images/shapes/blue-x.jpeg">
 
-        <img style="position:absolute;top:55%;left:5%;" src="images/shapes/green-square.jpeg">
+        <img class="floating-shape" style="position:absolute;top:55%;left:5%;" src="images/shapes/green-square.jpeg">
 
-        <img style="position: absolute;right:7%;top: 40%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/green-triangle.jpeg">
+        <img class="floating-shape" style="position: absolute;right:7%;top: 40%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/green-triangle.jpeg">
 
-        <img style="position: absolute;left:7%;top: 35%; height: 65px;width: auto;object-fit: contain;" src="images/shapes/red-circle.jpeg">
-        <img style="position: absolute;right: 5%;top: 17%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/red-circle.jpeg">
+        <img class="floating-shape" style="position: absolute;left:7%;top: 35%; height: 65px;width: auto;object-fit: contain;" src="images/shapes/red-circle.jpeg">
+        <img class="floating-shape" style="position: absolute;right: 5%;top: 17%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/red-circle.jpeg">
 
-        <img style="position: absolute;right: 7%;bottom: 37%;height: 50px;width: auto;object-fit: contain;" src="images/shapes/red-x.jpeg">
+        <img class="floating-shape" style="position: absolute;right: 7%;bottom: 37%;height: 50px;width: auto;object-fit: contain;" src="images/shapes/red-x.jpeg">
 
-        <img style="position: absolute;left:14%;bottom: 5%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/turq-circle.jpeg">
+        <img class="floating-shape" style="position: absolute;left:14%;bottom: 5%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/turq-circle.jpeg">
 
-        <img style="position: absolute;bottom: 15%;right: 2%; height: 65px;width: auto;object-fit: contain;" src="images/shapes/turq-triangle.jpeg">
+        <img class="floating-shape" style="position: absolute;bottom: 15%;right: 2%; height: 65px;width: auto;object-fit: contain;" src="images/shapes/turq-triangle.jpeg">
 
-        <img style="position: absolute;left:13%;top: 23%;" src="images/shapes/turq-x.jpeg">
+        <img class="floating-shape" style="position: absolute;left:13%;top: 23%;" src="images/shapes/turq-x.jpeg">
 
-        <div class="project project-right">
+        <!-- <div class="project project-right" style="background: url(images/xfinity-project.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;"> -->
+        <div class="project project-right" style="background: url(images/weather-project.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;">
             <div class="container">
                 <div class="project-name">
-                    <h1>Project 1</h1>
-                    <p>Project 1 Description</p>
-                    <a href="#"><button class="arrow-button">View Project</button></a>
+                    <h1>Weather Channel</h1>
+                    <p>This project was is an improvement on the basic weather app. The page is a clone of the weather channel but also works like the original because of API connectivity.</p>
+                    <a href="https://bejewelled-unicorn-5837be.netlify.app/"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
 
@@ -243,24 +360,33 @@
                         Front-end
                     </h3>
                 </div>
-                <div class="ps-side-logo ps-rating">
-                    <div>
-                        <h2>A</h2>
-                        <p>Austin</p>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>AWESOME</p>
                     </div>
-                    <div class="rating-blow">
+                    <div class="rating-letter">
+                        <h2>A</h2>
+                    </div>
+                    <div class="rating-below">
                         <p>ABCD</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="project project-left">
+        <div class="project project-left" style="background: url(images/gamedatabase.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;">
+        <!-- <div class="project project-left" style="    background: url(images/weather-project.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;"> -->
             <div class="container">
                 <div class="project-name">
-                    <h1>Project 2</h1>
-                    <p>Project 2 Description</p>
-                    <a href="#"><button class="arrow-button">View Project</button></a>
+                    <h1>Game Database</h1>
+                    <p>This project is a gaming database that allows users to search for games by name, console, and genre. The games are sorted by metacritic score and are selectable to view details like game description and more.</p>
+                    <a href="https://poetic-rabanadas-1d8116.netlify.app/"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
 
@@ -273,19 +399,38 @@
                 <h1>02</h1>
             </div>
             <div class="ps-side">
-                <img src="images/psx-side.png">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.png">
+                    <p>Austin</p>
+                </div>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>BOLD</p>
+                    </div>
+                    <div class="rating-letter">
+                        <h2>B</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="project project-right">
+        <div class="project project-right" style="background: url(images/xfinity-project.jpeg);background-size: cover;background-position: right;">
             <div class="container">
                 <div class="project-name">
-                    <h1>Project 3</h1>
-                    <p>Project 3 Description</p>
-                    <a href="#"><button class="arrow-button">View Project</button></a>
+                    <h1>XFinity Clone</h1>
+                    <p>This project is a clone of a previous version of the XFinity's homepage in June 2021. The goal was to recreate the exact site as closely as possible without using the official sites code.</p>
+                    <a href="https://austintorres578.github.io/Mock-Xfinity/"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
-
                 </div>
                 <div class="project-scroll-overlay">
 
@@ -295,16 +440,36 @@
                 <h1>03</h1>
             </div>
             <div class="ps-side">
-                <img src="images/psx-side.png">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.png">
+                    <p>Austin</p>
+                </div>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>COOL</p>
+                    </div>
+                    <div class="rating-letter">
+                        <h2>C</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="project project-left">
+        <div class="project project-left" style="background:url('images/rockhorse-project.webp');background-size: cover;background-position: right;">
             <div class="container">
                 <div class="project-name">
-                    <h1>Project 4</h1>
-                    <p>Project 4 Description</p>
-                    <a href="#"><button class="arrow-button">View Project</button></a>
+                    <h1>Lighthouse Score</h1>
+                    <p>This project was originally going to be used as updated version of a family friends coverband website. Now it has become a project with the goal to obtain a perfect score on Google Lighthouse</p>
+                    <a href="https://austintorres578.github.io/ROCKHORSE-SITE/"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
 
@@ -317,38 +482,64 @@
                 <h1>04</h1>
             </div>
             <div class="ps-side">
-                <img src="images/psx-side.png">
-            </div>
-        </div>
-
-        <div class="projects-header">
-            <p>All Used Tech.</p>
-            <h2>Learning is fun!</h2>
-        </div>
-
-    </section>
-
-    <section class="tech-section">
-        <div class="tech">
-            <div class="container">
-                <div>
-                    <img src="images/tech/html.webp">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.png">
+                    <p>Austin</p>
                 </div>
-                <div>
-                    <div>
-                        <small>- TITLE</small>
-                        <p class="tech-title">hello im a title</p>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>DOPE</p>
                     </div>
-                    <div>
-                        <p>1</p>
+                    <div class="rating-letter">
+                        <h2>D</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        
+
+        <a class="mobile-project" href="https://bejewelled-unicorn-5837be.netlify.app/">
+            <img src="images/mobile/weather-channel-mobile.jpeg">
+        </a>
+
+        <a class="mobile-project" href="https://austintorres578.github.io/Mock-Xfinity/">
+            <img src="images/mobile/game-data-mobile.jpeg">
+        </a>
+
+        <a class="mobile-project" href="#">
+            <img src="images/mobile/xfinity-mobile.jpeg">
+        </a>
+
+        <a class="mobile-project" href="#">
+            <img src="images/mobile/lighthouse-score-mobile.jpeg">
+        </a>
+
     </section>
 
+    <section class="mobile-contact">
+        <h3>Let's talk.</h3>
+        <p>New projects, freelance inquiry or even a coffee.</p>
+        <form id="contact-form">
+            <p>Name *</p>
+            <input type="text"></input>
+            <p>Email *</p>
+            <input type="email"></input>
+            <p>Message *</p>
+            <textarea></textarea>
+            <input type="submit" id="form-button" value="Send Message"></input>
+        </form>
+        <div class="floating-contact">
+            <h1>Contact</h1>
+        </div>
+    </section>
     
     <footer>
         <div class="footer-logo">
@@ -357,11 +548,11 @@
             </a>
         </div>
         <div class="footer-nav">
-            <a href="#">Linkedin</a>
-            <a href="#">Github</a>
+            <a href="https://www.linkedin.com/in/austin-torres-55696420a">Linkedin</a>
+            <a href="https://github.com/austintorres578/">Github</a>
         </div>
         <div class="footer-copyright">
-            <p>© 2024 Riccardo Zanutta</p>
+            <p>© 2024 Austin Torres</p>
         </div>
     </footer>
     <script src="script.js"></script>
