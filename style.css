@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'arista-pro-light';
-    src: url('/fonts/Arista-pro/Arista-Pro-Alternate-Light-trial.ttf') format('truetype');
+    src: url('fonts/Arista-pro/Arista-Pro-Alternate-Light-trial.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'zrnic';
-    src: url('/fonts/zrnic/zrnic rg.otf') format('opentype');
+    src: url('fonts/zrnic/zrnic rg.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'clarendon';
-    src: url('/fonts/clarendon/Clarendon Regular') format('opentype');
+    src: url('fonts/clarendon/Clarendon Regular') format('opentype');
 }
 
 @font-face {
     font-family: 'sony';
-    src: url('/fonts/Sony/LM Roman 5.otf') format('opentype');
+    src: url('fonts/Sony/LM Roman 5.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'test';
-    src: url('/fonts/Sony/Acknowledgement.TTF') format('truetype');
+    src: url('fonts/Sony/Acknowledgement.TTF') format('truetype');
 }
 
 /* @media(max-width:1180px){

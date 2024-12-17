@@ -22,7 +22,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('service_n63khcw', 'contact_form', this)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {
@@ -194,12 +194,12 @@
                     </div>
                     <form id="contact-form">
                         <p>Name *</p>
-                        <input type="text"></input>
+                        <input type="text" name="user_name"></input>
                         <p>Email *</p>
-                        <input type="email"></input>
+                        <input type="email" name="user_email"></input>
                         <p>Message *</p>
                         <textarea></textarea>
-                        <input type="submit" id="form-button" value="Send Message"></input>
+                        <input type="submit" id="form-button" value="Send Message" name="message"></input>
                     </form>
                     <div class="floating-contact">
                         <h1>Contact</h1>
