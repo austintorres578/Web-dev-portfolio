@@ -179,6 +179,18 @@
     body .hero .container h1 {
         font-size: 65px;
     }
+    body .hero .socials ul li img{
+        height: 60px;
+    }
+
+    body .hero .socials{
+        top: 61%;
+        left: 87px;
+    }
+
+    body .hero .socials ul li {
+        margin-right: 0px;
+    }
 
 
     /* body .hero .socials {
