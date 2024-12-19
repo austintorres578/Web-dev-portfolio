@@ -19,29 +19,27 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
-    // Select all forms with the class 'contact-form'
-    let allForms = document.querySelectorAll('.contact-form');
-
-    // Loop through each form and attach the submit event listener
-    allForms.forEach(form => {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            
-            // Send the form data using emailjs
-            emailjs.sendForm('service_n63khcw', 'contact_form', this)
-                .then(() => {
-                    console.log('SUCCESS!');
-                }, (error) => {
-                    console.log('FAILED...', error);
+            // Select all forms with the class 'contact-form'
+            let allForms = document.querySelectorAll('.contact-form');
+    
+            // Loop through each form and attach the submit event listener
+            allForms.forEach(form => {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+    
+                    // Send the form data using emailjs
+                    emailjs.sendForm('service_n63khcw', 'contact_form', this)
+                        .then(() => {
+                            console.log('SUCCESS!');
+                            window.location.reload(); // Reload the page after success
+                        }, (error) => {
+                            console.log('FAILED...', error);
+                        });
                 });
-
-
-
-        });
-    });
-};
-
+            });
+        };
     </script>
+    
 </head>
 <body>
     <header>
