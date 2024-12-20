@@ -289,7 +289,7 @@ header img{
     color: white;
     position: relative;
     background-position: center 5%;
-    background:url('images/hero-background.jpeg');
+    background:url('images/hero-background.webp');
     background-size: 95%;
     overflow: hidden;
 }
@@ -398,7 +398,7 @@ header img{
     height: 35px;
     width: 75px;
     object-fit: contain;
-    background: url(images/right-arrow.png);
+    background: url(images/right-arrow.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
