@@ -571,6 +571,9 @@ header img{
 
 .mobile-about p{
     margin-bottom: 0px;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+    line-height: 24px;
+    font-size: 18px;
 }
 
 .projects-line{
@@ -1024,7 +1027,7 @@ header img{
 }
 
 .hero-contact-about p{
-    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -1062,7 +1065,7 @@ header img{
 }
 
 .form-top p{
-    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
 }
 
 .hero-contact-about strong{
@@ -1407,7 +1410,7 @@ footer div{
   }
 
   .mobile-contact p{
-    font-family: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
   }
 
   .mobile-contact form p{
