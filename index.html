@@ -46,16 +46,16 @@
     <header>
         <div class="container">
             <div>
-                <a href="/"><img src="images/nav-logo.webp" alt="nav logo"></a>
+                <a href="/" aria-label="Nav Home Link"><img src="images/nav-logo.webp" alt="nav logo"></a>
             </div>
             <div>
                 <ul>
-                    <li class="desk-link"><a href="#" onclick="revealHeroContact()">About</a></li>
-                    <li class="mobile-link"><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#tech">Tech</a></li>
-                    <li class="desk-link"><a href="#" onclick="revealHeroContact()">Contact</a></li>
-                    <li class="mobile-link"><a href="#contact-form">Contact</a></li>
+                    <li class="desk-link"><a href="#" aria-label="About Button" onclick="revealHeroContact()">About</a></li>
+                    <li class="mobile-link"><a href="#about" aria-label="About Button">About</a></li>
+                    <li><a href="#projects" aria-label="Projects Button">Projects</a></li>
+                    <li><a href="#tech" aria-label="Tech Button">Tech</a></li>
+                    <li class="desk-link"><a href="#" onclick="revealHeroContact()" aria-label="Contact Button">Contact</a></li>
+                    <li class="mobile-link"><a href="#contact-form" aria-label="Contact Button">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -65,13 +65,13 @@
             <div class="hero-name">
                 <h1>Austin Torres</h1>
                 <p>Front-End Developer</p>
-                <a href="#"><button id="hero-button" class="arrow-button">About Me</button></a>
+                <a href="#" aria-label="About Me Button"><button id="hero-button" class="arrow-button">About Me</button></a>
             </div>
         </div>
         <div class="socials">
             <ul>
-                <li><a href="https://www.linkedin.com/in/austin-torres-55696420a"><img src="images/socials/slightly_more_pixelated_linkedin_logo.webp" alt="linkedin logo"></a></li>
-                <li><a href="https://github.com/austintorres578/"><img src="images/socials/less_pixelated_github_logo_v2.webp" alt="github logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/austin-torres-55696420a" aria-label="linkedin button"><img src="images/socials/slightly_more_pixelated_linkedin_logo.webp" alt="linkedin logo"></a></li>
+                <li><a href="https://github.com/austintorres578/" aria-label="github button"><img src="images/socials/less_pixelated_github_logo_v2.webp" alt="github logo"></a></li>
             </ul>
         </div>
         <div class="hero-letter">
@@ -159,7 +159,7 @@
             <div class="hero-contact-wrapper">
                 <div class="hero-contact-about">
                     <div class="about-text">
-                        <h3>About Me.</h3>
+                        <h2>About Me.</h2>
                         <p>
                             I am a <strong>passionate Front-end Web Developer</strong> with a knack for creating <strong>visually stunning</strong> and <strong>user-friendly websites</strong>. With a <strong>strong eye for design</strong> and <strong>user experience</strong>, I craft <strong>intuitive digital solutions</strong> that engage and captivate. Always eager to <strong>learn and grow</strong>, I embrace challenges with <strong>creativity</strong> and a <strong>commitment to excellence</strong>. Whether collaborating with a team or working solo, I bring <strong>positivity, precision</strong>, and a drive to <strong>deliver outstanding results</strong>.
                         </p>
@@ -198,9 +198,9 @@
                             <p>Bootstrap</p>
                         </div>
                     </div>
-                    <a href="Resume.pdf" target="_blank" style="text-decoration: none;width: fit-content;display: block;margin-left: auto;margin-right: auto;"><button id="form-button" style="border: none;display: block;cursor: pointer;">Resume</button></a>
+                    <a href="Resume.pdf" target="_blank" aria-label="resume button" style="text-decoration: none;width: fit-content;display: block;margin-left: auto;margin-right: auto;"><button id="form-button" style="border: none;display: block;cursor: pointer;">Resume</button></a>
                     <div class="floating-about">
-                        <h1>About</h1>
+                        <h2>About</h2>
                     </div>
                 </div>
                 <div class="hero-contact-form">
@@ -214,16 +214,19 @@
                         </div>
                     </div>
                     <form class="contact-form">
-                        <p>Name *</p>
-                        <input type="text" name="user_name"></input>
-                        <p>Email *</p>
-                        <input type="email" name="user_email"></input>
-                        <p>Message *</p>
-                        <textarea name="message"></textarea>
+                        
+                        <label for="contact-name-input">Name *</label>
+                        <input type="text" name="user_name" id="contact-name-input"></input>
+                        
+                        <label for="contact-email-input">Email *</label>
+                        <input type="email" name="user_email" id="contact-email-input"></input>
+                        
+                        <label for="contact-message">Message *</label>
+                        <textarea name="message" id="contact-message"></textarea>
                         <input type="submit" id="form-button" value="Send Message"></input>
                     </form>
                     <div class="floating-contact">
-                        <h1>Contact</h1>
+                        <h2>Contact</h2>
                     </div>
                 </div>
             </div>
@@ -238,10 +241,10 @@
             <p>
                 I am a <strong>passionate Front-end Web Developer</strong> with a knack for creating <strong>visually stunning</strong> and <strong>user-friendly websites</strong>. With a <strong>strong eye for design</strong> and <strong>user experience</strong>, I craft <strong>intuitive digital solutions</strong> that engage and captivate. Always eager to <strong>learn and grow</strong>, I embrace challenges with <strong>creativity</strong> and a <strong>commitment to excellence</strong>. Whether collaborating with a team or working solo, I bring <strong>positivity, precision</strong>, and a drive to <strong>deliver outstanding results</strong>.
               </p>
-              <a href="Resume.pdf" target="_blank" style="text-decoration: none;width: fit-content;padding-left: 20px;display: block;"><button id="form-button" style="border: none;display: block;cursor: pointer;">Resume</button></a>
+              <a href="Resume.pdf" target="_blank" aria-label="resume button" style="text-decoration: none;width: fit-content;padding-left: 20px;display: block;"><button id="form-button" style="border: none;display: block;cursor: pointer;">Resume</button></a>
         </div>
         <div class="floating-about">
-            <h1>About</h1>
+            <h3>About</h3>
         </div>
     </section>
 
@@ -326,7 +329,7 @@
     <section class="project-section" id="projects">
         <div class="projects-header">
             <p>My Projects</p>
-            <h2>Latest Works</h2>
+            <h1>Latest Works</h1>
         </div>
 
         <img class="floating-shape" style="position: absolute;left:5%;top: 15%;" src="images/shapes/blue-square.webp" alt="blue square">
@@ -361,7 +364,7 @@
                 <div class="project-name">
                     <h1>Weather Channel</h1>
                     <p>This project was is an improvement on the basic weather app. The page is a clone of the weather channel but also works like the original because of API connectivity.</p>
-                    <a href="https://bejewelled-unicorn-5837be.netlify.app/"><button class="arrow-button">View Project</button></a>
+                    <a href="https://bejewelled-unicorn-5837be.netlify.app/" aria-label="Weather Channel Project Button"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
 
@@ -410,7 +413,7 @@
                 <div class="project-name">
                     <h1>Game Database</h1>
                     <p>This project is a gaming database that allows users to search for games by name, console, and genre. The games are sorted by metacritic score and are selectable to view details like game description and more.</p>
-                    <a href="https://poetic-rabanadas-1d8116.netlify.app/"><button class="arrow-button">View Project</button></a>
+                    <a href="https://poetic-rabanadas-1d8116.netlify.app/" aria-label="game database button"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
 
@@ -452,7 +455,7 @@
                 <div class="project-name">
                     <h1>XFinity Clone</h1>
                     <p>This project is a clone of a previous version of the XFinity's homepage in June 2021. The goal was to recreate the exact site as closely as possible without using the official sites code.</p>
-                    <a href="https://austintorres578.github.io/Mock-Xfinity/"><button class="arrow-button">View Project</button></a>
+                    <a href="https://austintorres578.github.io/Mock-Xfinity/" aria-label="Mock Xfinity Project Button"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
                 </div>
@@ -493,7 +496,7 @@
                 <div class="project-name">
                     <h1>Lighthouse Score</h1>
                     <p>This project was originally going to be used as updated version of a family friends coverband website. Now it has become a project with the goal to obtain a perfect score on Google Lighthouse</p>
-                    <a href="https://austintorres578.github.io/ROCKHORSE-SITE/"><button class="arrow-button">View Project</button></a>
+                    <a href="https://austintorres578.github.io/ROCKHORSE-SITE/" aria-label="rockhouse project button"><button class="arrow-button">View Project</button></a>
                 </div>
                 <div class="blue-overlay">
 
@@ -530,19 +533,19 @@
             </div>
         </div>
 
-        <a class="mobile-project" href="https://bejewelled-unicorn-5837be.netlify.app/">
+        <a class="mobile-project" href="https://bejewelled-unicorn-5837be.netlify.app/" aria-label="Weather Project Button">
             <img src="images/mobile/weather-channel-mobile.webp" alt="weather project image">
         </a>
 
-        <a class="mobile-project" href="https://poetic-rabanadas-1d8116.netlify.app/">
+        <a class="mobile-project" href="https://poetic-rabanadas-1d8116.netlify.app/" aria-label="game database project">
             <img src="images/mobile/game-data-mobile.webp" alt="game database project image">
         </a>
 
-        <a class="mobile-project" href="https://austintorres578.github.io/Mock-Xfinity/">
+        <a class="mobile-project" href="https://austintorres578.github.io/Mock-Xfinity/" aria-label="mock Xfinity Project Button">
             <img src="images/mobile/xfinity-mobile.webp" alt="mock xfinity project image">
         </a>
 
-        <a class="mobile-project" href="https://austintorres578.github.io/ROCKHORSE-SITE/">
+        <a class="mobile-project" href="https://austintorres578.github.io/ROCKHORSE-SITE/" aria-label="Lighthouse Score Project Button">
             <img src="images/mobile/lighthouse-score-mobile.webp" alt="lighthouse score project image">
         </a>
 
@@ -552,12 +555,15 @@
         <h3>Let's talk.</h3>
         <p>New projects, freelance inquiry or even a coffee.</p>
         <form id="contact-form" class="contact-form">
-            <p>Name *</p>
-            <input type="text" name="user_name"></input>
-            <p>Email *</p>
-            <input type="email" name="user_email"></input>
-            <p>Message *</p>
-            <textarea name="message"></textarea>
+           
+            <label for="mobile-name-input">Name *</label>
+            <input type="text" name="user_name" id="mobile-name-input"></input>
+            
+            <label for="mobile-email-input">Email *</label>
+            <input type="email" name="user_email" id="mobile-email-input"></input>
+            
+            <label for="mobile-message"></label>
+            <textarea name="message" id="mobile-message"></textarea>
             <input type="submit" id="form-button" value="Send Message"></input>
         </form>
         <div class="floating-contact">
@@ -572,8 +578,8 @@
             </a>
         </div>
         <div class="footer-nav">
-            <a href="https://www.linkedin.com/in/austin-torres-55696420a">Linkedin</a>
-            <a href="https://github.com/austintorres578/">Github</a>
+            <a href="https://www.linkedin.com/in/austin-torres-55696420a" aria-label="LinkedIn Button">Linkedin</a>
+            <a href="https://github.com/austintorres578/" aria-label="Github Button">Github</a>
         </div>
         <div class="footer-copyright">
             <p>© <span id="year"></span> Austin Torres</p>

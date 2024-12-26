@@ -385,7 +385,7 @@ header img{
     border: none;
     /* cursor: pointer; */
     font-family: 'League Spartan', Helvetica, Arial, sans-serif;
-    
+    cursor: pointer;
 }
 
 .arrow-button:after{
@@ -463,9 +463,13 @@ header img{
     top: -33%;
 }
 
-.mobile-about .floating-about h1{
+.mobile-about .floating-about h3{
     margin-bottom: 0px;
     width: fit-content;
+    font-family:  'arista-pro-light';;
+    margin-top: 15px;
+    font-size: 190px;
+    color: rgb(224, 224, 226);
 }
 
 .mobile-about div{
@@ -789,7 +793,7 @@ header img{
     font-weight: bold;
 }
 
-.projects-header h2{
+.projects-header h1{
     font-family: 'arista-pro-light';
     margin-top:0px;
     text-align: center;
@@ -1043,7 +1047,7 @@ header img{
     right: -17%;
 }
 
-.floating-about h1{
+.floating-about h2{
     font-family:  'arista-pro-light';;
     margin-top: 15px;
     font-size: 190px;
@@ -1097,6 +1101,12 @@ header img{
     margin-top: 0px;
 }
 
+.hero-contact-form label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+}
+
 .hero-contact-form div{
     width: 410px;
     margin-left: auto;
@@ -1121,7 +1131,7 @@ header img{
     z-index: 1;
 }
 
-.floating-contact h1{
+.floating-contact h2{
     font-family:  'arista-pro-light';;
     margin-top: 15px;
     font-size: 190px;
@@ -1609,6 +1619,11 @@ footer div{
     transform: translateY(4px); 
   }
   
+  .contact-form label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: League Spartan,Helvetica,Arial,sans-serif;
+  }
 
   .contact-form input{
     color: white;
