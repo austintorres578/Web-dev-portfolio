@@ -67,9 +67,9 @@
         margin-right: 10px;
     }
 
-    body .mobile-contact{
+    /* body .mobile-contact{
         display: block;
-    }
+    } */
 
     body .mobile-about{
         display: flex;
@@ -191,7 +191,9 @@
     body .hero .socials ul li {
         margin-right: 0px;
     }
-
+    /* body .mobile-contact-con{
+        padding: 25px;
+    } */
 
     /* body .hero .socials {
         left: 90px;
@@ -1386,49 +1388,58 @@ footer div{
     object-fit: contain;
 } */
 
-  .mobile-contact{
-    display: none;
-    padding: 30px;
-    background-color: #292938;
+  .mobile-contact-con{
     color: white;
     position: relative;
     z-index: 2;
     overflow: hidden;
+    background-color: #1f1f2c;
+
   }
 
-  .mobile-contact form{
+  .mobile-contact-con .mobile-contact{
+    background-color: #292938;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    padding: 30px;
+    max-width:575px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile-contact-con  .mobile-contact form{
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 2;
   }
 
-  .mobile-contact .floating-contact{
+  .mobile-contact-con .floating-contact{
     left: auto;
     right: -125px;
   }
 
-  .mobile-contact .floating-contact h1{
+  .mobile-contact-con .floating-contact h1{
     color: #23242c8a;
   }
 
-  .mobile-contact h3{
+  .mobile-contact-con h3{
     font-family: League Spartan, Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 0px;
   }
 
-  .mobile-contact p{
+  .mobile-contact-con p{
     font-family: League Spartan,Helvetica,Arial,sans-serif;
   }
 
-  .mobile-contact form p{
+  .mobile-contact-con form p{
     font-family: League Spartan, Helvetica, Arial, sans-serif;
     font-weight: bold;
   }
 
-  .mobile-contact form input{
+  .mobile-contact-con form input{
     margin-bottom: 15px;
     background: none;
     border-top: 0px;
@@ -1436,7 +1447,7 @@ footer div{
     border-right: 0px;
 }
 
-    .mobile-contact textarea{
+    .mobile-contact-con textarea{
         margin-bottom: 15px;
     height: 100px;
     border-top: 0px;
@@ -1631,4 +1642,25 @@ footer div{
 
   .contact-form textarea{
     color: white;
+  }
+
+  .mobile-contact-line{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .mobile-contact-line .red{
+    background-color: #df0024;
+  }
+
+  .mobile-contact-line .yellow{
+    background-color: #f3c300;
+  }
+
+  .mobile-contact-line .cyan{
+    background-color:#00ac9f
+  }
+
+  .mobile-contact-line .blue{
+    background-color: #2e6db4;
   }
