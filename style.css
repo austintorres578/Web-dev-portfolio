@@ -141,6 +141,10 @@
 
 @media(max-width:575px){
 
+    body .nav-resume{
+        display: none;
+    }
+
     body header img{
         height: 65px;
         display: none;
@@ -409,6 +413,22 @@ header img{
 
 .arrow-button:hover::after{
     left: 113%;
+}
+
+.nav-resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(270deg, #feb414, #f15c21);
+}
+
+.nav-resume a{
+    padding: 7px 14px;
+    line-height: 22px;
+}
+
+.nav-resume a:after{
+    height: 0px !important;
 }
 
 .hero .socials{
